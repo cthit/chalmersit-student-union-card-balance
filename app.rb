@@ -3,6 +3,8 @@ require 'sinatra/json'
 
 require_relative 'student_union_card_balance'
 
+set :bind, '0.0.0.0'
+
 get '/' do
   if params['number']
     begin
