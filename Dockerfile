@@ -27,6 +27,9 @@ RUN bundle install
 # Upload source
 COPY . $APP_HOME
 
+RUN useradd ruby
+USER ruby
+
 # Start server
 ENV PORT 3000
 EXPOSE 3000
