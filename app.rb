@@ -13,6 +13,6 @@ get '/' do
       [400, json({error: e})]
     end
   else
-    [400, json({"error": "no number provided"})]
+    [400, json({error: "no number provided"})]
   end
 end

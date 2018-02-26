@@ -18,7 +18,7 @@ class StudentUnionCardBalance
   def student_union_card_balance(number)
     begin
       visit CARD_BALANCE_URL
-    rescue Capybara::Poltergeist::StatusFailError
+    rescue Capybara::Poltergeist::StatusFailError, Capybara::Poltergeist::TimeoutError
       raise "Kortladdning service unreachable."
     end
 
